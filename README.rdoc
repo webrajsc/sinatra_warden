@@ -8,6 +8,7 @@ A Sinatra (http://github.com/sinatra/sinatra) module that provides authenticatio
   require 'sinatra_warden'
 
   class Application < Sinatra::Base
+    enable :sessions # or set :sessions, true
     register Sinatra::Warden
 
     get '/admin' do
