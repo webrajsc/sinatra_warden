@@ -69,9 +69,6 @@ module Sinatra
     def self.registered(app)
       app.helpers Warden::Helpers
 
-      # Enable Sessions
-      app.set :sessions, true
-
       app.set :auth_failure_path, '/'
       app.set :auth_success_path, '/'
       # Setting this to true will store last request URL
@@ -130,5 +127,4 @@ module Sinatra
     end
   end # Warden
 
-  register Warden
 end # Sinatra
